@@ -61,6 +61,7 @@ class AdminPanelProvider extends PanelProvider
                     ->allowExport()
                     ->allowImport()
             )
+            ->plugin(\TomatoPHP\FilamentCms\FilamentCMSPlugin::make()->useThemeManager())
             ->authMiddleware([
                 Authenticate::class,
             ]);
